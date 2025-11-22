@@ -77,22 +77,80 @@ with left:
 
 with right:
     with st.sidebar:
-        st.markdown("### 🧠 About this project")
+        st.markdown("## 🧠 About This Project")
         st.write(
             """
-This app is part of my NLP learning journey.
+    This web application demonstrates an **Email & SMS Spam Detection Model** built using  
+    **Natural Language Processing (NLP)** and **Machine Learning**.
 
-- Text preprocessing (cleaning, stopwords, stemming)  
-- TF-IDF feature extraction  
-- Classical ML model for classification  
+    The goal is to classify messages into two categories:
+
+    - **📌 SPAM**
+    - **📌 NOT SPAM**
+
+    This is a classic binary text-classification problem.
             """
         )
-        st.markdown("---")
-        st.write("**Tech stack:**")
-        st.write("- Python\n- scikit-learn\n- NLTK\n- Streamlit\n- joblib")
+
+        st.markdown("### 🎯 What This App Does")
+        st.write(
+            """
+    - Takes an email/SMS message as input  
+    - Cleans and preprocesses the text  
+    - Converts text into numerical features using **TF-IDF**  
+    - Uses a trained ML model to classify the message  
+    - Shows prediction probability & detailed breakdown  
+            """
+        )
+
+        st.markdown("### 🛠 Technologies Used")
+        st.write(
+            """
+    - **Python**
+    - **pandas**, **numpy**
+    - **NLTK** (stopwords, stemming)
+    - **TF-IDF Vectorization**
+    - **scikit-learn** (Logistic Regression / Multinomial Naive Bayes)
+    - **joblib** for model loading
+    - **Streamlit** for UI
+            """
+        )
+
+        st.markdown("### 🔬 NLP Workflow")
+        st.write(
+            """
+    1. **Text Cleaning**
+    - Lowercasing  
+    - Removing links  
+    - Removing punctuation & special characters  
+    - Removing stopwords  
+    - Applying stemming  
+
+    2. **Vectorization**
+    - TF-IDF converts text → numeric features  
+
+    3. **Model Training**
+    - Logistic Regression  
+    - Multinomial Naive Bayes  
+
+    4. **Evaluation**
+    - Accuracy  
+    - Precision & recall  
+    - Confusion matrix  
+            """
+        )
+
+        st.markdown("### 📦 Deployment")
+        st.write(
+            """
+    The trained model and TF-IDF vectorizer  
+    are stored using **joblib** and loaded inside this Streamlit app  
+    for live predictions.
+            """
+        )
+
         st.markdown("---")
         st.caption("Made by Tara · Data Science & Android dev learner")
-
 
 
 
