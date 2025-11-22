@@ -34,7 +34,7 @@ def result(msg:str):
     res=Model.predict(vect)[0]
     output=""
     if(res==0):
-        output="✅ Looks Good! This is a Genuine Email ."
+        output="✅ Looks Good! This is a Genuine Message ."
     else :
         output="🚨 WARNING: High Probability of SPAM! DO NOT click any links."
 
@@ -48,7 +48,7 @@ def result(msg:str):
 
 st.markdown(
     """
-    <h1 style="text-align:center; margin-bottom:0;">📬 Email Spam Detector</h1>
+    <h1 style="text-align:center; margin-bottom:0;">📬 Email/SMS Spam Detector</h1>
     <p style="text-align:center; color:gray; margin-top:0;">
         NLP + Machine Learning project to classify messages as <b>Spam</b> or <b>Not Spam</b>.
     </p>
@@ -65,7 +65,7 @@ with left:
     msg = st.text_area("Message content:",
                             height=160,
                             placeholder="Type or paste an email here...")
-    if st.button("🚀 Analyze message", use_container_width=True):
+    if st.button(" Analyze message", use_container_width=True):
         if msg.strip():
             label = result(msg)
             st.markdown("---")
