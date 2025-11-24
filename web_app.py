@@ -32,11 +32,13 @@ def result(msg:str):
     text=clean_text(msg)
     vect=tfid_vect.transform(text)
     res=Model.predict(vect)[0]
+    print(res)
+    print(type(res))
     output=""
     if(res==0):
-        output="✅ Looks Good! This is a Genuine Message ."
-    else :
         output="🚨 WARNING: High Probability of SPAM! DO NOT click any links."
+    else :
+        output="✅ Looks Good! This is a Genuine Message ."
 
     return output
 
